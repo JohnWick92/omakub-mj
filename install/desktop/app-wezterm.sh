@@ -1,1 +1,1 @@
-yay -S wezterm
+yay -S wezterm --noconfirm
