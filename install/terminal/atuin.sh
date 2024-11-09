@@ -1,4 +1,4 @@
-yay -Sy --noconfirm atuin
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
 if $(gum confirm "Press (Y) to register a new account into Atuin or (N) if want to log back in."); then
   atuin register
