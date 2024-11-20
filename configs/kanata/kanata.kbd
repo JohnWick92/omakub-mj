@@ -1,0 +1,45 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a   s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt comp rctl
+)
+
+(defvar
+  tap-time 150
+  hold-time 200
+)
+
+(defalias
+  esc (tap-hold $tap-time $hold-time esc (layer-while-held qwe))
+  a (tap-hold $tap-time $hold-time a lmet)
+  r (tap-hold $tap-time $hold-time r lalt)
+  s (tap-hold $tap-time $hold-time s lsft)
+  t (tap-hold $tap-time $hold-time t lctl)
+  n (tap-hold $tap-time $hold-time n lmet)
+  e (tap-hold $tap-time $hold-time e lalt)
+  i (tap-hold $tap-time $hold-time i lsft)
+  o (tap-hold $tap-time $hold-time o lctl)
+ )
+
+(deflayer col
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    [    ]  \
+  @esc  @a  @r   @s   @t   g    m    @n   @e   @i   @o   '  ret
+  lsft x    c    d    v    z    k    h    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt comp rctl
+)
+
+(deflayer qwe
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  @a   s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt comp rctl
+)
+
