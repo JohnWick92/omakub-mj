@@ -1,5 +1,5 @@
-yay -S kanata
-sudo gropuadd uinput
+yay -S kanata --noconfirm --needed
+sudo groupadd -f uinput
 sudo usermod -aG uinput "$USER"
 sudo usermod -aG input "$USER"
 echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' | sudo tee /etc/udev/rules.d/99-inputs.rules
