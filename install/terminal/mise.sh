@@ -1,1 +1,1 @@
-yay -S --needed mise --noconfirm
+cargo install mise --version 2024.11.15
