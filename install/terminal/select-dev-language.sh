@@ -20,10 +20,8 @@ if [[ -n "$languages" ]]; then
       mise use --global go@latest
       ;;
     PHP)
-      yay -Sy --noconfirm php
-      php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-      php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
-      rm composer-setup.php
+      yay -Sy --noconfirm re2c
+      mise use --global php@latest
       ;;
     Python)
       mise use --global python@latest
